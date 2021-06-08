@@ -9,7 +9,7 @@
 1. Install with peer dependencies:
 
 ```js
-npm install --save-dev @varp/code eslint eslint-import-resolver-alias eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
+npm install --save-dev eslint-config-varp eslint eslint-import-resolver-alias eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 2. Create `.prettierrc.json` file with content:
@@ -30,7 +30,7 @@ npm install --save-dev @varp/code eslint eslint-import-resolver-alias eslint-imp
 
 ```js
 module.exports = {
-    extends: ["plugin:varp-code/index"],
+    extends: ["varp"],
     rules: {
         /* Additional rules */
     }
@@ -76,7 +76,7 @@ npm install --save-dev stylelint stylelint-config-recommended stylelint-order st
 
 ```js
 module.exports = {
-    extends: ["plugin:varp-code/style"],
+    extends: ["eslint-config-varp/style"],
     rules: {
         /* Additional rules */
     }
