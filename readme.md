@@ -1,15 +1,15 @@
-# eslint-config-varp
+# varp-code
 
 <a href="https://www.npmjs.com/package/varp-code">
     <img src="https://nodei.co/npm/varp-code.png?mini=true">
 </a>
 
-## Add ESlint
+## ESlint
 
 1. Install with peer dependencies:
 
 ```js
-npm --dev varp-code 
+npm install --save-dev varp-code eslint eslint-import-resolver-alias eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 2. Create `.eslintrc.js` file in root with content:
@@ -50,12 +50,12 @@ module.exports = {
 }
 ```
 
-## Set up StyleLint
+## StyleLint
 
 1. Install with peer dependencies:
 
 ```js
-npx install-peerdeps --dev stylelint-config-varp
+npm install --save-dev stylelint stylelint-config-recommended stylelint-order stylelint-scss stylelint-selector-bem-pattern
 ```
 
 2. Create `.stylelintrc.js` with content:
@@ -99,8 +99,8 @@ node_modules
 
 ```json
 "scripts": {
-        "lint": "stylelint . && eslint .",
-        "lint:fix": "stylelint . --fix && eslint . --fix"
+    "lint": "stylelint . && eslint .",
+    "lint:fix": "stylelint . --fix && eslint . --fix"
 }
 ```
 
