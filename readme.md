@@ -1,4 +1,4 @@
-# @varp/code
+# eslint-config-varp
 
 <a href="https://www.npmjs.com/package/eslint-config-varp">
     <img src="https://nodei.co/npm/eslint-config-varp.png?mini=true">
