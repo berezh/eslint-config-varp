@@ -7,16 +7,9 @@ module.exports = {
         'plugin:import/warnings',
         'plugin:import/typescript',
         'plugin:json/recommended',
-        'prettier'
+        'prettier',
     ],
     plugins: ['@typescript-eslint', 'react-hooks', 'prettier'],
-    parserOptions: {
-        ecmaVersion: 2018,
-        sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true,
-        },
-    },
     rules: {
         'prettier/prettier': [
             'error',
@@ -24,7 +17,16 @@ module.exports = {
                 endOfLine: 'auto',
             },
         ],
+        'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
+        'react-hooks/rules-of-hooks': 'error',
+        'import/no-default-export': 'error',
+        'import/named': 'off',
+        'import/order': ['error', { groups: ['external'], 'newlines-between': 'always' }],
+        'import/first': 'error',
+        'import/no-named-as-default': 'off',
         'react/prop-types': 'off',
+        'react/display-name': 'off',
+        'react/no-unescaped-entities': 'off',
         camelcase: 'off',
         '@typescript-eslint/camelcase': 'off',
         'no-unused-vars': 'off',
@@ -48,27 +50,18 @@ module.exports = {
                 typedefs: true,
             },
         ],
-        '@typescript-eslint/no-empty-interface': [
-            'error',
-            { allowSingleExtends: true },
-        ],
-        'react/display-name': 'off',
+        '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
         '@typescript-eslint/no-useless-constructor': 'error',
-        'import/no-default-export': 'error',
-        'import/named': 'off',
-        'import/order': [
-            'error',
-            { groups: ['external'], 'newlines-between': 'always' },
-        ],
-        'import/first': 'error',
-        'react-hooks/rules-of-hooks': 'error',
-        'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
-        'react/no-unescaped-entities': 'off',
-        'import/no-named-as-default': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-empty-function': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off'
-        
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+    },
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 2018,
+        sourceType: 'module',
     },
     settings: {
         react: {

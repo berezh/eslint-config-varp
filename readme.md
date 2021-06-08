@@ -30,7 +30,7 @@ npm install --save-dev varp-code eslint eslint-import-resolver-alias eslint-impo
 
 ```js
 module.exports = {
-    extends: ["varp-code"],
+    extends: ["plugin:varp-code/index"],
     rules: {
         /* Additional rules */
     }
@@ -76,7 +76,7 @@ npm install --save-dev stylelint stylelint-config-recommended stylelint-order st
 
 ```js
 module.exports = {
-    extends: ["varp-code/style"],
+    extends: ["plugin:varp-code/style"],
     rules: {
         /* Additional rules */
     }
