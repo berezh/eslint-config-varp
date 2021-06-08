@@ -1,7 +1,7 @@
-# varp-code
+# @varp/code
 
-<a href="https://www.npmjs.com/package/varp-code">
-    <img src="https://nodei.co/npm/varp-code.png?mini=true">
+<a href="https://www.npmjs.com/package/@varp/code">
+    <img src="https://nodei.co/npm/@varp/code.png?mini=true">
 </a>
 
 ## ESlint
@@ -9,7 +9,7 @@
 1. Install with peer dependencies:
 
 ```js
-npm install --save-dev varp-code eslint eslint-import-resolver-alias eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
+npm install --save-dev @varp/code eslint eslint-import-resolver-alias eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 2. Create `.prettierrc.json` file with content:

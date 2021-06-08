@@ -1,6 +1,6 @@
 {
-  "name": "varp-code",
-  "version": "0.0.3",
+  "name": "@varp/code",
+  "version": "0.0.1",
   "description": "ESLint, StyleLint, Prettier configs by Varp",
   "keywords": [
     "typescript",
