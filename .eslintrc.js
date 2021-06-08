@@ -6,9 +6,10 @@ module.exports = {
         'plugin:import/errors',
         'plugin:import/warnings',
         'plugin:import/typescript',
-        'plugin:json/recommended'
+        'plugin:json/recommended',
+        'prettier'
     ],
-    plugins: ['@typescript-eslint', 'json', 'react-hooks'],
+    plugins: ['@typescript-eslint', 'react-hooks', 'prettier'],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
@@ -17,6 +18,12 @@ module.exports = {
         },
     },
     rules: {
+        'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+        ],
         'react/prop-types': 'off',
         camelcase: 'off',
         '@typescript-eslint/camelcase': 'off',
@@ -60,12 +67,7 @@ module.exports = {
         'import/no-named-as-default': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-empty-function': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-        'max-len': ['error', { code: 120, comments: 200 }],
-        indent: 'off',
-        '@typescript-eslint/indent':['error', 4],
-        'quotes': 'off',
-        '@typescript-eslint/quotes':['error', 'single']
+        '@typescript-eslint/explicit-module-boundary-types': 'off'
         
     },
     settings: {

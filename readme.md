@@ -12,7 +12,21 @@
 npm install --save-dev varp-code eslint eslint-import-resolver-alias eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
-2. Create `.eslintrc.js` file in root with content:
+2. Create `.prettierrc.json` file with content:
+
+```json
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120,
+    "useTabs": false
+}
+
+```
+
+3. Create `.eslintrc.js` file with content:
 
 ```js
 module.exports = {
@@ -23,7 +37,7 @@ module.exports = {
 };
 ```
 
-3. Add `.vscode/settings.json` file with content:
+4. Add `.vscode/settings.json` file with content:
 ```json
 {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -41,7 +55,7 @@ module.exports = {
 }
 ```
 
-4. Add new scripts to package.json:
+5. Add new scripts to package.json:
 
 ```json
 "scripts": {
