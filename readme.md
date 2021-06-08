@@ -1,7 +1,7 @@
 # @varp/code
 
-<a href="https://www.npmjs.com/package/@varp/code">
-    <img src="https://nodei.co/npm/@varp/code.png?mini=true">
+<a href="https://www.npmjs.com/package/eslint-config-varp">
+    <img src="https://nodei.co/npm/eslint-config-varp.png?mini=true">
 </a>
 
 ## ESlint
