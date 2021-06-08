@@ -76,7 +76,7 @@ npm install --save-dev stylelint stylelint-config-recommended stylelint-order st
 
 ```js
 module.exports = {
-    extends: ["eslint-config-varp/style"],
+    extends: ["eslint-config-varp/stylelint"],
     rules: {
         /* Additional rules */
     }
