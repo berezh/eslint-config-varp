@@ -1,11 +1,10 @@
 {
   "name": "eslint-config-varp",
-  "version": "0.0.10",
-  "description": "ESLint, StyleLint, Prettier configs by Varp",
+  "version": "0.0.11",
+  "description": "ESLint, Prettier configs by Varp",
   "keywords": [
     "typescript",
     "eslint",
-    "stylelint",
     "prettier",
     "config"
   ],
@@ -24,12 +23,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.1",
-    "stylelint": "^13.13.1",
-    "stylelint-config-recommended": "^5.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0",
-    "stylelint-selector-bem-pattern": "^2.1.0"
+    "prettier": "^2.3.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.26.0",
@@ -43,17 +37,10 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.1",
-    "stylelint": "^13.13.1",
-    "stylelint-config-recommended": "^5.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0",
-    "stylelint-selector-bem-pattern": "^2.1.0",
     "typescript": "^4.3.2"
   },
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "stylelint": "stylelint .",
-    "stylelint:fix": "stylelint . --fix"
+    "lint:fix": "eslint . --fix"
   }
 }
