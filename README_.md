@@ -41,7 +41,6 @@ module.exports = {
 ```json
 {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.trimAutoWhitespace": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
