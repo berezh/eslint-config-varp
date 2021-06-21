@@ -49,8 +49,7 @@ module.exports = {
         "typescript",
         "typescriptreact"
     ],
-    "eslint.run": "onSave",
-    "eslint.nodePath": "./node_modules"
+    "eslint.run": "onSave"
 }
 ```
 
@@ -58,8 +57,8 @@ module.exports = {
 
 ```json
 "scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
 }
 ```
 
