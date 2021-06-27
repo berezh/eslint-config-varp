@@ -41,15 +41,10 @@ module.exports = {
 ```json
 {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+      "source.fixAll.eslint": true
     },
-    "eslint.validate": [
-        "typescript",
-        "typescriptreact"
-    ],
-    "eslint.run": "onSave"
+    "eslint.validate": ["typescript", "typescriptreact"]
 }
 ```
 
