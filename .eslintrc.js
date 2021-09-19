@@ -29,16 +29,7 @@ module.exports = {
         camelcase: 'off',
         '@typescript-eslint/camelcase': 'off',
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': [
-            'error',
-            {
-                vars: 'all',
-                args: 'after-used',
-                ignoreRestSiblings: false,
-                varsIgnorePattern: '^_',
-                argsIgnorePattern: '^_',
-            },
-        ],
+        '@typescript-eslint/no-unused-vars': ['error', { args: 'after-used', ignoreRestSiblings: true }],
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-use-before-define': [
             'error',
