@@ -8,7 +8,7 @@ module.exports = {
         'plugin:import/typescript',
         'prettier',
     ],
-    plugins: ['@typescript-eslint', 'react-hooks', 'prettier'],
+    plugins: ['@typescript-eslint', 'react-hooks', 'prettier', 'simple-import-sort'],
     rules: {
         'prettier/prettier': [
             'error',
@@ -42,10 +42,13 @@ module.exports = {
         ],
         '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
         '@typescript-eslint/no-useless-constructor': 'error',
+        'no-explicit-any': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-empty-function': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         'lines-between-class-members': 'error',
+        'import/order': 'off',
+        'simple-import-sort/imports': 'error',
     },
     parserOptions: {
         ecmaFeatures: {
