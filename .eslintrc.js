@@ -8,7 +8,7 @@ module.exports = {
         'plugin:import/typescript',
         'prettier',
     ],
-    plugins: ['@typescript-eslint', 'react-hooks', 'prettier', 'simple-import-sort'],
+    plugins: ['@typescript-eslint', 'react-hooks', 'prettier'],
     rules: {
         'prettier/prettier': [
             'error',
@@ -48,7 +48,6 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         'lines-between-class-members': 'error',
         'import/order': 'off',
-        'simple-import-sort/imports': 'error',
     },
     parserOptions: {
         ecmaFeatures: {
