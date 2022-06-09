@@ -12,17 +12,12 @@
 npx install-peerdeps --dev eslint-config-varp
 ```
 
-2. Create `.prettierrc.json` file with content:
+2. Create `.prettierrc.js` file with content:
 
-```json
-{
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true,
-    "printWidth": 120,
-    "useTabs": false
-}
+```js
+module.exports = {
+    /* Additional rules */
+};
 
 ```
 
