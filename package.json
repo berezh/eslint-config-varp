@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-varp",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "ESLint, Prettier configs by Varp",
   "keywords": [
     "typescript",
@@ -9,7 +9,7 @@
     "config"
   ],
   "main": "index.js",
-  "repository": "https://github.com/berezh/varp-code",
+  "repository": "https://github.com/berezh/eslint-config-varp",
   "author": "Varp",
   "license": "MIT",
   "peerDependencies": {

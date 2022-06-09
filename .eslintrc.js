@@ -14,6 +14,12 @@ module.exports = {
       'error',
       {
         endOfLine: 'auto',
+        trailingComma: 'es5',
+        tabWidth: 2,
+        semi: true,
+        singleQuote: true,
+        printWidth: 120,
+        useTabs: false,
       },
     ],
     'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
