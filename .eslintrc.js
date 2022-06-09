@@ -10,7 +10,6 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', 'react-hooks', 'prettier'],
   rules: {
-    indent: ['error', 2],
     'prettier/prettier': [
       'error',
       {
