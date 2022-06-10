@@ -16,7 +16,7 @@ npx install-peerdeps --dev eslint-config-varp
 
 ```js
 module.exports = {
-    /* Additional rules */
+    /* Rrettier rules */
 };
 
 ```
@@ -27,7 +27,7 @@ module.exports = {
 module.exports = {
     extends: ["varp"],
     rules: {
-        /* Additional rules */
+        /* Eslint rules */
     }
 };
 ```
