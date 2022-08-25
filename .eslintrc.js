@@ -54,6 +54,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'lines-between-class-members': 'error',
     'import/order': 'off',
+    'max-len': ['error', { code: 120, tabWidth: 4 }],
   },
   parserOptions: {
     ecmaFeatures: {
