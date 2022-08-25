@@ -32,7 +32,13 @@ module.exports = {
 };
 ```
 
-4. Add `.vscode/settings.json` file with content:
+4. Create `.eslintignore` file with content:
+
+```
+node_modules
+```
+
+5. Add `.vscode/settings.json` file with content:
 ```json
 {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -43,7 +49,7 @@ module.exports = {
 }
 ```
 
-5. Add new scripts to package.json:
+6. Add new scripts to package.json:
 
 ```json
 "scripts": {
