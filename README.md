@@ -58,7 +58,20 @@ node_modules
 }
 ```
 
-### Notes
+## Cases
+
+### Override folder
+
+```js
+module.exports = {
+  extends: '../.eslintrc.js',
+    rules: {
+        /* Overrided rules */
+    }
+};
+```
+
+## Notes
 
 - `typescript` package not on `peerDependencies`, but it require to be on the project.
 
