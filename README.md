@@ -16,7 +16,7 @@ npx install-peerdeps --dev eslint-config-varp
 
 ```js
 module.exports = {
-    /* Rrettier rules */
+  /* Rrettier rules */
 };
 
 ```
@@ -25,50 +25,53 @@ module.exports = {
 
 ```js
 module.exports = {
-    extends: ["varp"],
-    rules: {
-        /* Eslint rules */
-    }
+  extends: ["varp"],
+  rules: {
+    /* Eslint rules */
+  }
 };
 ```
 
-4. Create `.eslintignore` file with content:
-
-```
-node_modules
-```
-
-5. Add `.vscode/settings.json` file with content:
+4. Add `.vscode/settings.json` file with content:
 ```json
 {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "eslint.validate": ["typescript", "typescriptreact"]
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["typescript", "typescriptreact"]
 }
 ```
 
-6. Add new scripts to package.json:
+5. Add new scripts to package.json:
 
 ```json
 "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix"
 }
 ```
 
 ## Cases
 
-### Override folder
+### Override rules
 
+* Create file in selected folter: `.eslintrc.js`
+* Add content:
 ```js
 module.exports = {
   extends: '../.eslintrc.js',
-    rules: {
-        /* Overrided rules */
-    }
+  rules: {
+    /* Overrided rules */
+  }
 };
+```
+
+### Ignore folers/files
+* Create file: `.eslintignore`
+* Add content:
+```
+node_modules
 ```
 
 ## Notes
