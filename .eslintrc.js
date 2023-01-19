@@ -1,14 +1,20 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
   extends: [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
     "prettier",
+    "plugin:import/recommended", 
+    "plugin:json/recommended",
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:import/typescript"
   ],
-  plugins: ["@typescript-eslint", "react-hooks", "prettier"],
+  plugins: ["prettier", "@typescript-eslint"],
   rules: {
     "prettier/prettier": [
       "error",
@@ -29,18 +35,12 @@ module.exports = {
     "no-console": ["error", { allow: ["warn", "error", "info"] }],
     camelcase: "off",
     "lines-between-class-members": "error",
-    // HOOKS
-    "react-hooks/rules-of-hooks": "error",
     // IMPORT
     "import/no-default-export": "error",
     "import/named": "off",
     "import/order": ["error", { groups: ["external"], "newlines-between": "always" }],
     "import/first": "error",
     "import/no-named-as-default": "off",
-    // REACT
-    "react/prop-types": "off",
-    "react/display-name": "off",
-    "react/no-unescaped-entities": "off",
     // TYPESCRIPT
     "@typescript-eslint/camelcase": "off",
     "no-unused-vars": "off",
@@ -80,13 +80,6 @@ module.exports = {
         typedefs: true,
       },
     ],
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: "latest",
-    sourceType: "module",
   },
   settings: {
     react: {

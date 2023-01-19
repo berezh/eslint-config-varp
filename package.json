@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-varp",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "ESLint, Prettier configs by Varp",
   "keywords": [
     "typescript",
@@ -15,29 +15,29 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "4.x",
     "@typescript-eslint/parser": "4.x",
-    "eslint": "7.x",
+    "eslint": ">=7",
     "eslint-config-prettier": "8.x",
     "eslint-import-resolver-alias": "1.x",
     "eslint-import-resolver-typescript": "2.x",
     "eslint-plugin-import": "2.x",
+    "eslint-plugin-json": "3.x",
     "eslint-plugin-prettier": "3.x",
-    "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "4.x",
     "prettier": "2.x"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=4",
-    "@typescript-eslint/parser": ">=4",
-    "eslint": ">=7",
-    "eslint-config-prettier": ">=8",
-    "eslint-import-resolver-alias": ">=1",
-    "eslint-import-resolver-typescript": ">=2",
-    "eslint-plugin-import": ">=2",
-    "eslint-plugin-prettier": ">=3",
-    "eslint-plugin-react": ">=7",
-    "eslint-plugin-react-hooks": ">=4",
-    "prettier": ">=2",
-    "typescript": ">=4"
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.4"
   },
   "scripts": {
     "lint": "eslint .",

@@ -1,3 +1,5 @@
-const styles = require("../.eslintrc");
-
-module.exports = styles;
+module.exports = {
+  extends: ["../.eslintrc.js"],
+  rules: {
+  }
+};

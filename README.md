@@ -4,7 +4,23 @@
     <img src="https://nodei.co/npm/eslint-config-varp.png?mini=true">
 </a>
 
-## Set up
+### Go in
+
+1. [Initial Setup](#initial-setup)
+
+2. Specify config:
+    * [Common](#common)
+    * [Frontend](#frontend)
+
+3. [User cases](#user-cases):
+    * [Override rules](#override-rules)
+    * [Ignore path](#ignore-path)
+
+4. [Notes](#notes)
+
+
+
+## Initial Setup
 
 1. Install with peer dependencies:
 
@@ -18,21 +34,9 @@ npx install-peerdeps -D eslint-config-varp
 module.exports = {
   /* Rrettier rules */
 };
-
 ```
 
-3. Create `.eslintrc.js` file with content:
-
-```js
-module.exports = {
-  extends: ["varp"],
-  rules: {
-    /* Eslint rules */
-  }
-};
-```
-
-4. Add `.vscode/settings.json` file with content:
+3. Add `.vscode/settings.json` file with content:
 ```json
 {
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -43,7 +47,7 @@ module.exports = {
 }
 ```
 
-5. Add new scripts to package.json:
+4. Add new scripts to package.json:
 
 ```json
 "scripts": {
@@ -52,7 +56,43 @@ module.exports = {
 }
 ```
 
-## Cases
+## Configs
+
+### Common
+
+Config for simple packages or backend
+
+1. Create `.eslintrc.js` file with content:
+
+```js
+module.exports = {
+  extends: ["eslint-config-varp/common/index.js"],
+  rules: {
+    /* Eslint rules */
+  }
+};
+```
+
+### Frontend
+
+1. Install specific configurations
+
+```js
+npm install -D eslint-plugin-react@7 eslint-plugin-react-hooks@4
+```
+
+2. Create `.eslintrc.js` file with content:
+
+```js
+module.exports = {
+  extends: ["varp"],
+  rules: {
+    /* Eslint rules */
+  }
+};
+```
+
+## User cases
 
 ### Override rules
 
@@ -67,14 +107,15 @@ module.exports = {
 };
 ```
 
-### Ignore folers/files
+### Ignore path
+
 * Create file: `.eslintignore`
 * Add content:
+
 ```
-node_modules
+disc
 ```
 
 ## Notes
 
-- `typescript` package not on `peerDependencies`, but it require to be on the project.
-
+- `typescript` package is not on `peerDependencies`, but it require to be on the project.
