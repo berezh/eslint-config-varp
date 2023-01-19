@@ -1,3 +1,3 @@
-const styles = require("./common.js");
+const styles = require("./eslintrc.js");
 
 module.exports = styles;

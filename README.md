@@ -6,26 +6,22 @@
 
 ### Go in
 
-1. [Initial Setup](#initial-setup)
+1. [Setup](#setup)
 
-2. Specify config:
-    * [Common](#common)
-    * [Frontend](#frontend)
-
-3. [User cases](#user-cases):
+2. [User cases](#user-cases):
     * [Override rules](#override-rules)
     * [Ignore path](#ignore-path)
 
-4. [Notes](#notes)
+3. [Notes](#notes)
 
 
 
-## Initial Setup
+## Setup
 
 1. Install with peer dependencies:
 
 ```js
-npx install-peerdeps -D eslint-config-varp
+npx install-peerdeps -D eslint-config-varp-common eslint-config-varp
 ```
 
 2. Create `.prettierrc.js` file with content:
@@ -36,7 +32,17 @@ module.exports = {
 };
 ```
 
-3. Add `.vscode/settings.json` file with content:
+3. Create `.eslintrc.js` file with content:
+
+```js
+module.exports = {
+  extends: ["varp"],
+  rules: {
+    /* Eslint rules */
+  }
+};
+
+4. Add `.vscode/settings.json` file with content:
 ```json
 {
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -47,49 +53,13 @@ module.exports = {
 }
 ```
 
-4. Add new scripts to package.json:
+5. Add new scripts to package.json:
 
 ```json
 "scripts": {
   "lint": "eslint .",
   "lint:fix": "eslint . --fix"
 }
-```
-
-## Configs
-
-### Common
-
-Config for simple packages or backend
-
-1. Create `.eslintrc.js` file with content:
-
-```js
-module.exports = {
-  extends: ["eslint-config-varp/common/index.js"],
-  rules: {
-    /* Eslint rules */
-  }
-};
-```
-
-### Frontend
-
-1. Install specific configurations
-
-```js
-npm install -D eslint-plugin-react@7 eslint-plugin-react-hooks@4
-```
-
-2. Create `.eslintrc.js` file with content:
-
-```js
-module.exports = {
-  extends: ["varp"],
-  rules: {
-    /* Eslint rules */
-  }
-};
 ```
 
 ## User cases
