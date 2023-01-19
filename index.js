@@ -1,3 +1,3 @@
-const styles = require("./front/index.js");
+const styles = require("./common.js");
 
 module.exports = styles;
