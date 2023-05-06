@@ -46,6 +46,7 @@ module.exports = {
     /* Eslint rules */
   }
 };
+```
 
 4. Add `.vscode/settings.json` file with content:
 ```json
@@ -71,6 +72,23 @@ module.exports = {
 
 ### Override rules
 
+* Add `overrides` property in config file
+
+```js
+module.exports = {
+  overrides: [
+    {
+      files: ["*/**/*.js"],
+      rules: {
+        /* Overrided rules */
+      },
+    },
+  ],
+};
+```
+
+### Override rules with file
+
 * Create file in selected folter: `.eslintrc.js`
 * Add content:
 ```js
@@ -80,6 +98,18 @@ module.exports = {
     /* Overrided rules */
   }
 };
+```
+### Override rules for the folder
+
+```js
+overrides: [ 
+  {
+    files: ["folder/**/*.js"],
+    rules: {
+    /* Overrided rules */
+    }
+  }
+]
 ```
 
 ### Ignore path
