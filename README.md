@@ -18,15 +18,10 @@
 
 ## Setup
 
-1. Install with peer dependencies:
+1. Install:
 
 ```js
-npx install-peerdeps -D eslint-config-varp-common
-```
-
-
-```js
-npx install-peerdeps -D eslint-config-varp
+npm install -D eslint-config-varp
 ```
 
 2. Create `.prettierrc.js` file with content:
