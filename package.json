@@ -13,7 +13,6 @@
   "author": "Varp",
   "license": "MIT",
   "peerDependencies": {
-    "eslint": "7",
     "typescript": ">=4"
   },
   "devDependencies": {
@@ -21,9 +20,9 @@
     "typescript": "4.5.x"
   },
   "dependencies": {
+    "eslint-config-varp-common": "^0.1.0",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-config-varp-common": "^0.0.7"
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "scripts": {
     "lint": "eslint .",
