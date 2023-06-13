@@ -46,6 +46,7 @@ module.exports = {
 4. Add `.vscode/settings.json` file with content:
 ```json
 {
+  "editor.tabSize": 2,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
