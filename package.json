@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-varp",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "ESLint, Prettier configs by Varp",
   "keywords": [
     "typescript",

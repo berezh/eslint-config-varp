@@ -21,7 +21,7 @@
 1. Install:
 
 ```js
-npm install eslint-config-varp
+npm install -D eslint-config-varp
 ```
 
 2. Create `.prettierrc.js` file with content:
