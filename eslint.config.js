@@ -26,7 +26,7 @@ module.exports = [
           semi: true,
           singleQuote: false,
           quoteProps: "as-needed",
-          printWidth: 180,
+          printWidth: 140,
           useTabs: false,
           arrowParens: "avoid",
           bracketSameLine: true,
