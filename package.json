@@ -1,31 +1,44 @@
 {
   "name": "eslint-config-varp",
-  "version": "1.10.0",
+  "version": "2.2.0",
   "description": "ESLint, Prettier configs by Varp",
+  "main": "index.js",
   "keywords": [
     "typescript",
     "eslint",
     "prettier",
     "config"
   ],
-  "main": "index.js",
   "repository": "https://github.com/berezh/eslint-config-varp",
   "author": "Varp",
   "license": "MIT",
-  "peerDependencies": {
-    "typescript": ">=4"
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "typescript": "4.5.x"
-  },
-  "dependencies": {
-    "eslint-config-varp-common": "^1.0.2",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
-  },
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix",
+    "v": "npm --no-git-tag-version version minor",
+    "tsc": "tsc",
+    "pm": "npm run lint:fix && git add * && git commit -m\"update\" && git push origin master",
+    "p": "npm run v && npm run lint:fix && git add * && git commit -m\"v\" && git push origin master"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-typescript": "^4.3.5",
+    "eslint-plugin-check-file": "^3.2.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-json": "^4.0.1",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "globals": "^16.1.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-order": "^6.0.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
   }
 }

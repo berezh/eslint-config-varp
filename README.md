@@ -49,7 +49,7 @@ module.exports = {
   "editor.tabSize": 2,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {      
+  "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
   "eslint.validate": ["typescript", "typescriptreact", "javascript", "javascriptreact", "markdown", "json"],
