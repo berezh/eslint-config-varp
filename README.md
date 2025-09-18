@@ -111,11 +111,14 @@ overrides: [
 
 ### Ignore path
 
-* Create file: `.eslintignore`
-* Add content:
-
 ```
-disc
+const baseConfig = require('eslint-config-varp/frontend/index.js');
+const { globalIgnores, defineConfig } = require('eslint/config');
+
+module.exports = defineConfig(
+  ...baseConfig,
+  globalIgnores(['public', 'node_modules', '**/*.json'])
+);
 ```
 
 ## Notes
