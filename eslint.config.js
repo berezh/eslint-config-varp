@@ -71,7 +71,6 @@ module.exports = [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node,
         ...globals.es6,
         ...globals.jest,
         ...globals.mocha,

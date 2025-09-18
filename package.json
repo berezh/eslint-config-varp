@@ -18,7 +18,7 @@
     "stylelint:fix": "stylelint \"**/*.scss\" --fix",
     "v": "npm --no-git-tag-version version minor",
     "tsc": "tsc",
-    "pm": "npm run lint:fix && git add * && git commit -m\"update\" && git push origin master",
+    "pm": "git add * && git commit -m\"update\" && git push origin master",
     "p": "npm run v && npm run lint:fix && git add * && git commit -m\"v\" && git push origin master"
   },
   "dependencies": {
