@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-varp",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "ESLint, Prettier configs by Varp",
   "main": "index.js",
   "keywords": [
