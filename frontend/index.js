@@ -1,9 +1,10 @@
-const tseslint = require("typescript-eslint");
-const typescriptParser = require("@typescript-eslint/parser");
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
+import typescriptParser from "@typescript-eslint/parser";
 
-const sharedConfig = require("./shared.js");
+import sharedConfig from "./shared.js";
 
-module.exports = tseslint.config([
+export default defineConfig([
   ...sharedConfig,
   tseslint.configs.recommended,
   {

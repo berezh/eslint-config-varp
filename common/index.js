@@ -1,8 +1,9 @@
-const tseslint = require("typescript-eslint");
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
 
-const sharedConfig = require("./shared.js");
+import sharedConfig from "./shared.js";
 
-module.exports = tseslint.config(
+export default defineConfig([
   ...sharedConfig,
   tseslint.configs.recommended,
   {
@@ -59,5 +60,5 @@ module.exports = tseslint.config(
     rules: {
       "@typescript-eslint/no-require-imports": "off",
     },
-  }
-);
+  },
+]);

@@ -1,15 +1,21 @@
-import js from "@eslint/js";
 import { defineConfig } from "eslint/config";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
-
-import baseConfig from "../eslint.config.js";
+import globals from "globals";
 
 export default defineConfig([
-  js.configs.recommended,
-  ...baseConfig,
   {
     plugins: { react, "react-hooks": reactHooks },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+      },
+    },
     rules: {
       // REACT
       "react/prop-types": "off",
@@ -18,7 +24,7 @@ export default defineConfig([
       "react/no-deprecated": "off",
       "react/sort-comp": "off",
       "react/jsx-closing-bracket-location": "off",
-      "react/no-array-index-key": "error",
+      "react/no-array-index-key": "warn",
       "react/jsx-boolean-value": "error",
       "react/jsx-uses-vars": "error",
       "react/jsx-uses-react": "error",

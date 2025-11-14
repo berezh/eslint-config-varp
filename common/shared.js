@@ -1,8 +1,9 @@
-const js = require("@eslint/js");
+import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
 
-const baseConfig = require("../eslint.config.js");
+import baseConfig from "../eslint.config.js";
 
-module.exports = [
+export default defineConfig([
   js.configs.recommended,
   ...baseConfig,
   {
@@ -13,4 +14,4 @@ module.exports = [
       "linebreak-style": "off",
     },
   },
-];
+]);

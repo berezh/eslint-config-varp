@@ -1,21 +1,56 @@
-const prettierFlat = require("eslint-config-prettier/flat");
-const json = require("eslint-plugin-json");
-const prettierPlugin = require("eslint-plugin-prettier");
-const sonarjs = require("eslint-plugin-sonarjs");
-const globals = require("globals");
-const checkFile = require("eslint-plugin-check-file");
-const importPlugin = require("eslint-plugin-import");
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import json from "eslint-plugin-json";
+import sonarjs from "eslint-plugin-sonarjs";
+import checkFile from "eslint-plugin-check-file";
+import globals from "globals";
+import importPlugin from "eslint-plugin-import";
+import js from "@eslint/js";
 
-module.exports = [
-  prettierFlat,
+export default [
+  js.configs.recommended,
+  // json
+  {
+    files: ["**/*.json"],
+    ...json.configs["recommended"],
+  },
+  // sonarjs,
+  {
+    plugins: { sonarjs },
+    rules: {
+      "sonarjs/cognitive-complexity": ["error", 15],
+    },
+  },
+  // check-file
+  {
+    files: ["src/**/*.*", "test/**/*.*"],
+    plugins: {
+      "check-file": checkFile,
+    },
+    rules: {
+      "check-file/filename-naming-convention": [
+        "error",
+        {
+          "**/*.{js,ts,jsx,tsx,json}": "CAMEL_CASE",
+        },
+      ],
+    },
+  },
+  // import
   {
     plugins: {
-      json,
-      prettier: prettierPlugin,
-      sonarjs,
-      "check-file": checkFile,
       import: importPlugin,
     },
+    rules: {
+      "import/first": "error",
+      "import/default": "off",
+      "import/prefer-default-export": "off",
+      "import/no-named-as-default": "off",
+      "import/order": ["error", { groups: ["external"], "newlines-between": "always" }],
+    },
+  },
+  // rules
+  {
+    // files: ["**/*.{js,ts,jsx,tsx,json}"],
     rules: {
       "prettier/prettier": [
         "error",
@@ -32,7 +67,6 @@ module.exports = [
           bracketSameLine: true,
         },
       ],
-      // RULES
       "no-underscore-dangle": ["error", { allowAfterThis: true, allow: ["_id"] }],
       "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
       "prefer-destructuring": ["error", { object: true, array: false }],
@@ -59,14 +93,6 @@ module.exports = [
       "prefer-const": "error",
       "max-params": ["error", 7],
       "no-useless-escape": "error",
-      // IMPORT
-      "import/first": "error",
-      "import/default": "off",
-      "import/prefer-default-export": "off",
-      "import/no-named-as-default": "off",
-      "import/order": ["error", { groups: ["external"], "newlines-between": "always" }],
-      // sonarjs
-      "sonarjs/cognitive-complexity": ["error", 15],
     },
     languageOptions: {
       globals: {
@@ -77,15 +103,8 @@ module.exports = [
       },
     },
   },
+  eslintPluginPrettierRecommended,
   {
-    files: ["src/**/*.*"],
-    rules: {
-      "check-file/filename-naming-convention": [
-        "error",
-        {
-          "**/*.{js,ts}": "CAMEL_CASE",
-        },
-      ],
-    },
+    ignores: [".next", "build", "dist", "**/*.scss", "**/*.css"],
   },
 ];
