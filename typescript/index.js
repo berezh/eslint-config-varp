@@ -4,7 +4,6 @@ var tseslint = require("typescript-eslint");
 module.exports = defineConfig([
   tseslint.configs.recommended,
   {
-    // extends: [tseslint.configs.recommended],
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
@@ -36,9 +35,6 @@ module.exports = defineConfig([
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-misused-promises": "error",
       "@typescript-eslint/no-empty-object-type": "warn",
-      // // IMPORT
-      // "import/named": "off",
-      // "import/no-default-export": "off",
     },
   },
   // js
@@ -48,24 +44,4 @@ module.exports = defineConfig([
       "@typescript-eslint/no-require-imports": "off",
     },
   },
-  // {
-  //   files: ["**/*.ts"],
-  //   rules: {
-  //     "check-file/filename-naming-convention": [
-  //       "error",
-  //       {
-  //         "**/*.ts": "CAMEL_CASE",
-  //       },
-  //       {
-  //         ignoreMiddleExtensions: true,
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   files: ["**/*.js"],
-  //   rules: {
-  //     "@typescript-eslint/no-require-imports": "off",
-  //   },
-  // },
 ]);
