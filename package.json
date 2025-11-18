@@ -1,9 +1,8 @@
 {
   "name": "eslint-config-varp",
-  "version": "2.6.0",
-  "description": "ESLint, Prettier configs by Varp",
+  "version": "2.7.0",
+  "description": "ESLint, Prettier, Stylelint configs by Varp",
   "main": "index.js",
-  "type": "module",
   "keywords": [
     "typescript",
     "eslint",
@@ -36,9 +35,10 @@
     "eslint-plugin-sonarjs": "^3.0.5",
     "globals": "^16.1.0",
     "prettier": "^3.6.2",
-    "stylelint": "^16.19.1",
-    "stylelint-config-standard-scss": "^15.0.1",
-    "stylelint-order": "^6.0.4",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-prettier": "^5.0.3",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.4"
   }

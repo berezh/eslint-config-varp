@@ -24,23 +24,24 @@
 npm install -D eslint-config-varp
 ```
 
-2. Create `.prettierrc.js` file with content:
+2. Add `prettier` config to the `package.json`:
 
 ```js
-module.exports = {
-  /* Rrettier rules */
-};
+  "prettier": "eslint-config-varp/prettier",
 ```
 
-3. Create `.eslintrc.js` file with content:
+3. Create `eslint.config.js` file with content:
 
 ```js
-module.exports = {
-  extends: ["varp"],
+const { defineConfig } = require("eslint/config");
+const configs = require("eslint-config-varp");
+
+module.exports = defineConfig([
+  extends: [varp.eslint.base, varp.eslint.typescript, varp.eslint.react],
   rules: {
     /* Eslint rules */
   }
-};
+]);
 ```
 
 4. Add `.vscode/settings.json` file with content:
@@ -52,7 +53,30 @@ module.exports = {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
-  "eslint.validate": ["typescript", "typescriptreact", "javascript", "javascriptreact", "markdown", "json"],
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "always"
+    },
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "stylelint.validate": ["scss"],
+  "stylelint.snippet": ["scss"],
+  "stylelint.enable": true
 }
 ```
 
@@ -61,7 +85,9 @@ module.exports = {
 ```json
 "scripts": {
   "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
+  "lint:fix": "eslint . --fix",
+  "stylelint": "stylelint \"**/*.scss\"",
+  "stylelint:fix": "stylelint \"**/*.scss\" --fix",
 }
 ```
 
@@ -111,14 +137,16 @@ overrides: [
 
 ### Ignore path
 
-```
-const baseConfig = require('eslint-config-varp/frontend/index.js');
-const { globalIgnores, defineConfig } = require('eslint/config');
+```js
+const { defineConfig } = require("eslint/config");
+const configs = require("eslint-config-varp");
 
-module.exports = defineConfig(
-  ...baseConfig,
-  globalIgnores(['public', 'node_modules', '**/*.json'])
-);
+module.exports = defineConfig([
+  extends: [varp.eslint.base, varp.eslint.typescript, varp.eslint.react],
+  {
+    ignores: ["stories", "**/*.txt"],
+  },
+]);
 ```
 
 ## Notes

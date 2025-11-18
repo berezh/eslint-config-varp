@@ -1,7 +1,7 @@
-import tseslint from "typescript-eslint";
-import { defineConfig } from "eslint/config";
+var { defineConfig } = require("eslint/config");
+var tseslint = require("typescript-eslint");
 
-export default defineConfig([
+module.exports = defineConfig([
   tseslint.configs.recommended,
   {
     // extends: [tseslint.configs.recommended],
@@ -39,6 +39,13 @@ export default defineConfig([
       // // IMPORT
       // "import/named": "off",
       // "import/no-default-export": "off",
+    },
+  },
+  // js
+  {
+    files: ["**/*.js"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
     },
   },
   // {

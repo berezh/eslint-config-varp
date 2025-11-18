@@ -1,12 +1,12 @@
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import json from "eslint-plugin-json";
-import sonarjs from "eslint-plugin-sonarjs";
-import checkFile from "eslint-plugin-check-file";
-import globals from "globals";
-import importPlugin from "eslint-plugin-import";
-import js from "@eslint/js";
+const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
+const json = require("eslint-plugin-json");
+const sonarjs = require("eslint-plugin-sonarjs");
+const checkFile = require("eslint-plugin-check-file");
+const globals = require("globals");
+const importPlugin = require("eslint-plugin-import");
+const js = require("@eslint/js");
 
-export default [
+module.exports = [
   js.configs.recommended,
   // json
   {
@@ -52,21 +52,6 @@ export default [
   {
     // files: ["**/*.{js,ts,jsx,tsx,json}"],
     rules: {
-      "prettier/prettier": [
-        "error",
-        {
-          endOfLine: "auto",
-          trailingComma: "es5",
-          tabWidth: 2,
-          semi: true,
-          singleQuote: false,
-          quoteProps: "as-needed",
-          printWidth: 140,
-          useTabs: false,
-          arrowParens: "avoid",
-          bracketSameLine: true,
-        },
-      ],
       "no-underscore-dangle": ["error", { allowAfterThis: true, allow: ["_id"] }],
       "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
       "prefer-destructuring": ["error", { object: true, array: false }],
@@ -99,7 +84,7 @@ export default [
         ...globals.browser,
         ...globals.es6,
         ...globals.jest,
-        ...globals.mocha,
+        ...globals.node,
       },
     },
   },

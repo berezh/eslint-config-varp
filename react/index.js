@@ -1,9 +1,9 @@
-import { defineConfig } from "eslint/config";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import globals from "globals";
+var { defineConfig } = require("eslint/config");
+var react = require("eslint-plugin-react");
+var reactHooks = require("eslint-plugin-react-hooks");
+var globals = require("globals");
 
-export default defineConfig([
+module.exports = defineConfig([
   {
     plugins: { react, "react-hooks": reactHooks },
     languageOptions: {

@@ -1,5 +1,7 @@
-import base from "./base/index.js";
-import typescript from "./typescript/index.js";
-import react from "./react/index.js";
+var base = require("./base/index.js");
+var typescript = require("./typescript/index.js");
+var react = require("./react/index.js");
+var prettier = require("./prettier/index.js");
+var stylelint = require("./stylelint");
 
-export default { base, typescript, react };
+module.exports = { eslint: { base, typescript, react }, prettier, stylelint };
