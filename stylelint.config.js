@@ -29,6 +29,12 @@ module.exports = {
         message: "Expected name to be camel-case",
       },
     ],
+    "scss/at-mixin-pattern": [
+      "^([a-z][a-zA-Z0-9]+)$",
+      {
+        message: "Expected name to be camel-case",
+      },
+    ],
     // ORDER
     "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": null,
