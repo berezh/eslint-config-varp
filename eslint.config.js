@@ -32,7 +32,11 @@ module.exports = [
         {
           "**/*.{js,ts,jsx,tsx,json}": "CAMEL_CASE",
         },
+        {
+          ignoreMiddleExtensions: true,
+        },
       ],
+      "check-file/folder-naming-convention": ["error", { "src/**/": "CAMEL_CASE" }],
     },
   },
   // import
@@ -90,6 +94,6 @@ module.exports = [
   },
   eslintPluginPrettierRecommended,
   {
-    ignores: [".next", "build", "dist", "**/*.scss", "**/*.css"],
+    ignores: [".next", "build", "dist", "**/*.{css,scss,sql,csv,txt}"],
   },
 ];
