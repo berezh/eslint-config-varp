@@ -50,7 +50,7 @@ module.exports = [
   },
   // rules
   {
-    // files: ["**/*.{js,ts,jsx,tsx,json}"],
+    files: ["**/*.{js,ts,jsx,tsx}"],
     rules: {
       "no-underscore-dangle": ["error", { allowAfterThis: true, allow: ["_id"] }],
       "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
