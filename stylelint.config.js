@@ -23,16 +23,17 @@ module.exports = {
         message: "Expected custom property name to be camel-case or kebab-case",
       },
     ],
+    // SCSS
     "scss/dollar-variable-pattern": [
-      "^([a-z][a-zA-Z0-9]+)$",
+      "^([a-z][a-zA-Z0-9]+)|(([a-z][a-z0-9]*)(-[a-z0-9]+)*)$",
       {
-        message: "Expected name to be camel-case",
+        message: "Expected variable name to be camel-case or kebab-case",
       },
     ],
     "scss/at-mixin-pattern": [
-      "^([a-z][a-zA-Z0-9]+)$",
+      "^([a-z][a-zA-Z0-9]+)|(([a-z][a-z0-9]*)(-[a-z0-9]+)*)$",
       {
-        message: "Expected name to be camel-case",
+        message: "Expected name to be camel-case or kebab-case",
       },
     ],
     // ORDER
