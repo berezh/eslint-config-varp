@@ -37,7 +37,7 @@ const { defineConfig } = require("eslint/config");
 const configs = require("eslint-config-varp");
 
 module.exports = defineConfig([
-  extends: [varp.eslint.base, varp.eslint.typescript, varp.eslint.react],
+  extends: [configs.eslint.base, configs.eslint.typescript, configs.eslint.react],
   rules: {
     /* Eslint rules */
   }
@@ -110,29 +110,35 @@ module.exports = {
 };
 ```
 
-### Override rules with file
+### Override rules with file/folder
 
-* Create file in selected folter: `.eslintrc.js`
-* Add content:
+* In `eslint.config.js` disable `X` rule.
+* Add new section with path you want to override the `X` rule
+
+Example:
+
 ```js
-module.exports = {
-  extends: '../.eslintrc.js',
+{
   rules: {
-    /* Overrided rules */
-  }
-};
-```
-### Override rules for the folder
-
-```js
-overrides: [ 
-  {
-    files: ["folder/**/*.js"],
-    rules: {
-    /* Overrided rules */
-    }
-  }
-]
+    "check-file/filename-naming-convention": "off",
+  },
+},
+{
+  files: ["src/**/*", "test/**/*"],
+  ignores: ["src/migrations/**/*"],
+  rules: {
+    "check-file/filename-naming-convention": [
+      "error",
+      {
+        "**/*.{ts,tsx}": "CAMEL_CASE",
+      },
+      {
+        ignoreMiddleExtensions: true,
+      },
+    ],
+    "check-file/folder-naming-convention": ["error", { "src/**/": "CAMEL_CASE", "test/**/": "CAMEL_CASE" }],
+  },
+},
 ```
 
 ### Ignore path
